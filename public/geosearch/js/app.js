@@ -46,6 +46,6 @@ $('#geosearch').submit(function(e) {
 
     window.open(result);
 
-    $('#results').append('<li><a href="' + result + '">' + result + '</li>');
+    $('#results').append('<li><a href="' + result + '">' + form.query + ' (' + form.location + ' ' + form.domain +'/' + form.lang + ') </li>');
 
 });

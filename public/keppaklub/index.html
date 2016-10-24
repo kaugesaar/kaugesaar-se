@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Keppaklub - Kaugesaar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 70px;
+      }
+
+      pre {
+        padding: 15px;
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="geo-search">
+            <form id="geosearch">
+              <div class="form-group">
+                <label for="exampleSelect1">Välj Script</label>
+                <select class="form-control" id="script" name="script">
+                  <option>Välj ett script</option>
+                  <option value="a">BudgetScript</option>
+                  <option value="b">Broken Link Checker</option>
+                  <option value="c">QualityScore Tracker</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <pre><span id="result"></span></pre>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
