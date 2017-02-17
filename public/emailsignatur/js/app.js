@@ -111,29 +111,29 @@ function parseSubmit(form) {
 
   var template = function(value, lang, index) {
     if(index === 0) {
-      return `
-        <tr>
-          <td style="padding-right:10px">` + locale[lang][formKeys[index]] + `</td>
-          <td style="padding-right:10px"><a href="mailto:`+ form[formKeys[index]] +`" style="color:#000000;text-decoration:underline;">`+ form[formKeys[index]] +`</a></td>
-          <td style="padding-right:10px">` + value + `</td>
-        </tr> `
+      return "\
+        <tr> \
+          <td style='padding-right:10px'>" + locale[lang][formKeys[index]] + "</td> \
+          <td style='padding-right:10px'><a href='mailto:"+ form[formKeys[index]] +"' style='color:#000000;text-decoration:underline;'>"+ form[formKeys[index]] +"</a></td>\
+          <td style='padding-right:10px'>" + value + "</td>\
+        </tr> "
       }
 
     if (index === 1) {
-      return `
-        <tr>
-          <td style="padding-right:10px">` + locale[lang]['tel'] + `</td>
-          <td style="padding-right:10px">` + locale[lang]['tel_number'] + `</td>
-          <td style="padding-right:10px">` + value + `</td>
-        </tr> `
+      return "\
+        <tr>\
+          <td style='padding-right:10px'>" + locale[lang]['tel'] + "</td>\
+          <td style='padding-right:10px'>" + locale[lang]['tel_number'] + "</td>\
+          <td style='padding-right:10px'>" + value + "</td>\
+        </tr> "
       }
 
-  return `
-    <tr>
-      <td style="padding-right:10px">` + locale[lang][formKeys[index-1]] + `</td>
-      <td style="padding-right:10px">`+ form[formKeys[index-1]] +`</td>
-      <td style="padding-right:10px">` + value + `</td>
-    </tr> `
+  return "\
+    <tr>\
+      <td style='padding-right:10px'>" + locale[lang][formKeys[index-1]] + "</td>\
+      <td style='padding-right:10px'>"+ form[formKeys[index-1]] +"</td>\
+      <td style='padding-right:10px'>" + value + "</td>\
+    </tr> "
   }
 
   var store = locale[form.lang].stores[form.store];
@@ -217,23 +217,23 @@ $('#email-signature').submit(function(e) {
   var tableBody = parseSubmit(form);
 
   $('#result').empty()
-  .append(`
-    <span style="color:#000000;font-size:11pt;font-family:Calibri;font-weight:bold;">`+ form.name +`</span> <br>
-    <span style="color:#000000;font-size:10pt;font-family:Calibri;font-weight:normal;">`+ form.title +`</span> <br>
-    <img src="logo.png">
-    <table style="border-top:1px solid #000; height: 2px;" id="top-border">
-      <tbody>
-        <tr>
-          <td></td>
-        </tr>
-      </tbody
-    </table>
-    <table id="table-content" style="color:#000000;font-size:10pt;font-family:Calibri;font-weight:normal;">
-      <tbody>
-        `+ tableBody +`
-      </tbody>
-    </table>
-  `);
+  .append("\
+    <span style=\"color:#000000;font-size:11pt;font-family:Calibri;font-weight:bold;\">"+ form.name +"</span> <br>\
+    <span style=\"color:#000000;font-size:10pt;font-family:Calibri;font-weight:normal;\">"+ form.title +"</span> <br>\
+    <img src=\"logo.png\">\
+    <table style=\"border-top:1px solid #000; height: 2px;\" id=\"top-border\">\
+      <tbody>\
+        <tr>\
+          <td></td>\
+        </tr>\
+      </tbody\
+    </table>\
+    <table id=\"table-content\" style=\"color:#000000;font-size:10pt;font-family:Calibri;font-weight:normal;\">\
+      <tbody>\
+        "+ tableBody +"\
+      </tbody>\
+    </table>\
+  ");
 
   if($('#table-content').width() > 290) {
     $('#top-border').width($('#table-content').width());
