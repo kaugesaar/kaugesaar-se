@@ -64,9 +64,9 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="store">Butik</label>
-                  <select class="form-control" name="store" required>
-                    <option disabled selected value>-- välj en butik --</option>
+                  <label for="store">Avdelning</label>
+                  <select class="form-control" name="store" id="department" required>
+                    <option disabled selected value>-- välj avdelning --</option>
                     <option value="hq">HQ</option>
                     <option value="sisjon">Sisjön</option>
                     <option value="ringon">Ringön</option>
@@ -90,6 +90,10 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="form-group" id="im" style="display:none;">
+              <label for="im">IM</label>
+              <input type="text" name="im" id="imInput" class="form-control">
             </div>
             <hr>
             <button type="submit" class="btn btn-primary">Skapa</button>
