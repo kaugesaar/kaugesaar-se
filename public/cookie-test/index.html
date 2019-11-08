@@ -13,7 +13,7 @@
   <body>
     <h1>Cookies</h1>
     <script>
-      javascript:document.write(`<pre>${JSON.stringify(document.cookie.split(';').reduce((cookies, val) => { parts = val.split('='); cookies[parts[0]] = parts[1]; return cookies; }, {}), null, 2)}</pre>`)
+      document.write(`<pre>${JSON.stringify(document.cookie.split(';').reduce((cookies, val) => { parts = val.split('='); cookies[parts[0]] = parts[1]; return cookies; }, {}), null, 2)}</pre>`)
     </script>
     
   </body>
